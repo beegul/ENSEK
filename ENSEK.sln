@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSEK", "ENSEK\ENSEK.csproj", "{F989BDB2-68E9-43DA-832C-384AFBEC5988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSEK.Tests", "ENSEK.Tests\ENSEK.Tests.csproj", "{DE9073DA-40C2-46C8-A050-2703B60254C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F989BDB2-68E9-43DA-832C-384AFBEC5988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F989BDB2-68E9-43DA-832C-384AFBEC5988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F989BDB2-68E9-43DA-832C-384AFBEC5988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F989BDB2-68E9-43DA-832C-384AFBEC5988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9073DA-40C2-46C8-A050-2703B60254C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9073DA-40C2-46C8-A050-2703B60254C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9073DA-40C2-46C8-A050-2703B60254C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9073DA-40C2-46C8-A050-2703B60254C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

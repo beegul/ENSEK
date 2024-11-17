@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meter Reading Upload</title>
+</head>
+<body>
+    <h1>Upload Meter Readings</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" id="csvFileInput" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="results">
+        <h2>Results:</h2>
+        <p>Successful Readings: <span id="successfulReadings">0</span></p>
+        <p>Failed Readings: <span id="failedReadings">0</span></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('uploadForm');
+        const resultsDiv = document.getElementById('results');
+        const successfulReadingsSpan = document.getElementById('successfulReadings');
+        const failedReadingsSpan = document.getElementById('failedReadings');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const file = document.getElementById('csvFileInput').files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/meter-reading-uploads', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    successfulReadingsSpan.textContent = data.SuccessfulReadings;
+                    failedReadingsSpan.textContent = data.FailedReadings;
+                } else {
+                    resultsDiv.innerHTML += `<p>Error: ${response.status} - ${response.statusText}</p>`;
+                }
+            } catch (error) {
+                resultsDiv.innerHTML += `<p>Error: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

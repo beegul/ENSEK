@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+      <PackageReference Include="Serilog" Version="4.1.0" />
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+      <PackageReference Include="Serilog.Sinks.BrowserConsole" Version="8.0.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Test_Accounts.csv" />
+      <Content Include="Test_Accounts.csv">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="wwwroot\index.html">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Meter_Reading.csv" />
+      <Content Include="Meter_Reading.csv">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\build\asset-manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\asset-manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\logo192.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\logo512.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\robots.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\css\main.f855e6bc.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\css\main.f855e6bc.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\js\453.c951f43d.chunk.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\js\453.c951f43d.chunk.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\js\main.5e15397a.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\js\main.5e15397a.js.LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\js\main.5e15397a.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\build\static\media\logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\logo192.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\logo512.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\manifest.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\robots.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\css\main.f855e6bc.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\css\main.f855e6bc.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\453.c951f43d.chunk.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\453.c951f43d.chunk.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\main.5e15397a.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\main.5e15397a.js.LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\js\main.5e15397a.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\build\static\media\logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\css\main.f855e6bc.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\css\main.f855e6bc.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\453.c951f43d.chunk.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\453.c951f43d.chunk.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.5e15397a.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.5e15397a.js.LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.5e15397a.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\media\logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\css\main.e6c13ad2.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\css\main.e6c13ad2.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.0867e540.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.0867e540.js.LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\static\js\main.0867e540.js.map" />
+    </ItemGroup>
+
+</Project>

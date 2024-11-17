@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meter Reading Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <img src="ensek-logo.png" alt="Ensek Logo">
+    <h1>Upload Meter Readings</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" id="csvFileInput" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="results">
+        <h2>Results:</h2>
+        <p>Successful Readings: <span id="successfulReadings">0</span></p>
+        <p>Failed Readings: <span id="failedReadings">0</span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
