@@ -19,6 +19,7 @@ public class MeterReadingContext : DbContext
             .IsUnique();
     }
     
+    // Seeds the in memory database with the data from the CSV file.
     public void SeedData(string csvFilePath)
     {
         if (!Accounts.Any())
